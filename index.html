@@ -43,16 +43,16 @@
         <h3 class="mt-4 text-center">API and Database change Documentation for OPI Karim and Nurul bhaiya </h3>
 
         <div class="mt-4">
-            <h3>Add User Interaction</h3>
+            <h4>Add User Interaction</h4>
             <ul>
-                <li><strong>Endpoint:</strong> <code>POST /user_interaction</code></li>
+                <li><strong>Endpoint:</strong> <code>user_interaction</code></li>
                 <li><strong>Method:</strong> <code>POST</code></li>
                 <li><strong>Purpose:</strong> This endpoint allows you to add user interactions.</li>
             </ul>
         </div>
 
         <div class="mt-4">
-            <h3>Match Users</h3>
+            <h4>Match Users</h4>
             <ul>
                 <li><strong>Endpoint:</strong> <code>match_users</code></li>
                 <li><strong>Method:</strong> <code>POST</code></li>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="mt-4">
-            <h3>Start a Chat Session</h3>
+            <h4>Start a Chat Session</h4>
             <ul>
                 <li><strong>Endpoint:</strong> <code>chatting_started</code></li>
                 <li><strong>Method:</strong> <code>POST</code></li>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="mt-4">
-            <h3>Search Universities</h3>
+            <h4>Search Universities</h4>
             <ul>
                 <li><strong>Endpoint:</strong> <code>universities/{name?}</code></li>
                 <li><strong>Method:</strong> <code>GET</code></li>
@@ -80,7 +80,7 @@
         </div>
 
         <div class="mt-4">
-            <h3>Unmatch a User</h3>
+            <h4>Unmatch a User</h4>
             <ul>
                 <li><strong>Endpoint:</strong> <code>unmatched_user</code></li>
                 <li><strong>Method:</strong> <code>POST</code></li>
@@ -90,7 +90,7 @@
 
         <h1 class="mt-4 text-center">In live Database NURUL bhiay have to change</h1>
         <div class="mt-4">
-            <h3>user_interactions table</h3>
+            <h4>user_interactions table</h4>
             <ul>
                 <li><strong>change:</strong> <code>add extra column</code></li>
                 <li><strong>column name:</strong> <code>is_chat</code></li>
@@ -98,7 +98,7 @@
             </ul>
         </div>
         <div class="mt-4">
-            <h3>You have create new table name should be universities</h3>
+            <h4>You have create new table name should be universities</h4>
             <ul>
                 <li><strong>id:</strong> <code>AUTO_INCREAMENT and PRIMARY_KEY</code></li>
                 <li><strong>name:</strong> <code>varchar(256)</code></li>
@@ -194,7 +194,7 @@ INSERT INTO `universities` (`id`, `name`) VALUES
         </div>
 
         <div class="mt-4">
-            <h3>.ENV</h3>
+            <h4>.ENV</h4>
             <ul>
                 <li><strong>ADD FCMKEY/SERVERKEY:</strong> <code>AAAAWvDAq5g:APA91bE2nVb1ODms_VlKnV5vkLSkHCEeMvPslT7lCR-AQEpYytZYOyf8TPow1F3nJBU-qoqYyWm5fie912BYAD28jIhYo0FnxVOlqUex_QxiQyYJQ3l0praGCbeodyGwk8n-H9luuTph</code></li>
                 <li><strong>Purpose:</strong>Sending Push Notification</li>
