@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>API Documentation</title>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">API Documentation</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +40,7 @@
 
     <div class="container">
         <h1 class="mt-4 text-center">API and Database change Documentation </h1>
-        
+
         <div class="mt-4">
             <h2>Add User Interaction</h2>
             <ul>
@@ -46,7 +49,7 @@
                 <li><strong>Purpose:</strong> This endpoint allows you to add user interactions.</li>
             </ul>
         </div>
-        
+
         <div class="mt-4">
             <h2>Match Users</h2>
             <ul>
@@ -55,7 +58,7 @@
                 <li><strong>Purpose:</strong> Use this endpoint to match users.</li>
             </ul>
         </div>
-        
+
         <div class="mt-4">
             <h2>Start a Chat Session</h2>
             <ul>
@@ -64,16 +67,17 @@
                 <li><strong>Purpose:</strong> Initiates a chat session between users.</li>
             </ul>
         </div>
-        
+
         <div class="mt-4">
             <h2>Search Universities</h2>
             <ul>
                 <li><strong>Endpoint:</strong> <code>universities/{name?}</code></li>
                 <li><strong>Method:</strong> <code>GET</code></li>
-                <li><strong>Purpose:</strong> Retrieve all university Name. The optional <code>name</code> parameter can be used for filtering by university name. and search option</li>
+                <li><strong>Purpose:</strong> Retrieve all university Name. The optional <code>name</code> parameter can
+                    be used for filtering by university name. and search option</li>
             </ul>
         </div>
-        
+
         <div class="mt-4">
             <h2>Unmatch a User</h2>
             <ul>
@@ -84,24 +88,111 @@
         </div>
 
         <h1 class="mt-4 text-center">In live Database have to change</h1>
-    <div class="mt-4">
-        <h2>user_interactions table</h2>
-        <ul>
-            <li><strong>change:</strong> <code>add extra column</code></li>
-            <li><strong>column name:</strong> <code>is_chat</code></li>
-            <li><strong>value:</strong> default value<code> = 0</code></li>
-        </ul>
+        <div class="mt-4">
+            <h2>user_interactions table</h2>
+            <ul>
+                <li><strong>change:</strong> <code>add extra column</code></li>
+                <li><strong>column name:</strong> <code>is_chat</code></li>
+                <li><strong>value:</strong> default value<code> = 0</code></li>
+            </ul>
+        </div>
+        <div class="mt-4">
+            <h2>You have create new table name should be universities</h2>
+            <ul>
+                <li><strong>id:</strong> <code>AUTO_INCREAMENT and PRIMARY_KEY</code></li>
+                <li><strong>name:</strong> <code>varchar(256)</code></li>
+                <li><strong>Table create query:</strong> <code>
+                    <pre>
+                CREATE TABLE `universities` (
+  `id` int(11) NOT NULL,
+  `name` varchar(256) DEFAULT NULL
+)
+
+
+INSERT INTO `universities` (`id`, `name`) VALUES
+(1, 'Bangabandhu Sheikh Mujib Medical University'),
+(2, 'Bangabandhu Sheikh Mujibur Rahman Agricultural University'),
+(3, 'Bangladesh Agricultural University'),
+(4, 'Bangladesh University of Engineering & Technology'),
+(5, 'Chittagong University of Engineering & Technology'),
+(6, 'Hajee Mohammad Danesh Science & Technology University'),
+(7, 'Islamic University, Bangladesh'),
+(8, 'Jahangirnagar University'),
+(9, 'Khulna University of Engineering & Technology'),
+(10, 'Mawlana Bhashani Science & Technology University'),
+(11, 'National University'),
+(12, 'Patuakhali Science And Technology University'),
+(13, 'Rajshahi University of Engineering & Technology'),
+(14, 'Sher-e-Bangla Agricultural University'),
+(15, 'Shahjalal University of Science & Technology'),
+(16, 'University of Barisal'),
+(17, 'University of Chittagong'),
+(18, 'University of Dhaka'),
+(19, 'University of Development Alternative'),
+(20, 'University of Information Technology and Communication'),
+(21, 'University of Khulna'),
+(22, 'University of Liberal Arts Bangladesh'),
+(23, 'University of Rajshahi'),
+(24, 'University of Science & Technology Chittagong'),
+(25, 'University of South Asia'),
+(26, 'Varendra University'),
+(27, 'Begum Rokeya University, Rangpur'),
+(28, 'Sheikh Hasina University, Netrokona'),
+(29, 'Sheikh Zayed Islamic University'),
+(30, 'Bangladesh Open University'),
+(31, 'Bangladesh University of Professionals'),
+(32, 'Bangladesh University of Textiles'),
+(33, 'Ahsanullah University of Science and Technology'),
+(34, 'American International University-Bangladesh'),
+(35, 'Asian University for Women'),
+(36, 'Bangladesh University of Business and Technology'),
+(37, 'BGC Trust University Bangladesh'),
+(38, 'BRAC University'),
+(39, 'Canadian University of Bangladesh'),
+(40, 'Central Women\'s University'),
+(41, 'City University'),
+(42, 'Daffodil International University'),
+(43, 'East West University'),
+(44, 'Eastern University'),
+(45, 'Gono Bishwabidyalay'),
+(46, 'Green University of Bangladesh'),
+(47, 'Independent University, Bangladesh'),
+(48, 'International Islamic University Chittagong'),
+(49, 'International University of Business Agriculture & Technology'),
+(50, 'Leading University'),
+(51, 'Manarat International University'),
+(52, 'Metropolitan University'),
+(53, 'North South University'),
+(54, 'Premier University'),
+(55, 'Prime University'),
+(56, 'Pundra University of Science & Technology'),
+(57, 'Southeast University'),
+(58, 'Stamford University Bangladesh'),
+(59, 'State University of Bangladesh'),
+(60, 'Sylhet International University'),
+(61, 'The People\'s University of Bangladesh'),
+(62, 'United International University'),
+(63, 'University of Asia Pacific'),
+(64, 'University of Development Alternative'),
+(65, 'University of Liberal Arts Bangladesh'),
+(66, 'University of Science & Technology Chittagong'),
+(67, 'University of South Asia'),
+(68, 'Uttara University'),
+(69, 'Vcare University'),
+(70, 'World University of Bangladesh'),
+(71, 'Medical College'),
+(72, 'BGMEA University of Fashion & Technology '),
+(74, 'European University of Bangladesh'),
+(75, 'Dhaka International University'),
+(76, 'European University of Bangladesh'),
+(78, 'Sylhet Agricultural University');
+</pre>
+            </code></li>
+
+            </ul>
+        </div>
     </div>
-    <div class="mt-4">
-        <h2>You have create new table name should be universities</h2>
-        <ul>
-            <li><strong>id:</strong> <code>AUTO_INCREAMENT and PRIMARY_KEY</code></li>
-            <li><strong>name:</strong> <code>varchar(256)</code></li>
-            
-        </ul>
-    </div>
-    </div>
-    
+
 
     <footer class="bg-dark text-white mt-4 p-3">
         <div class="container">
@@ -114,4 +205,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
